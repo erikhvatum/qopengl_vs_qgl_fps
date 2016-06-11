@@ -14,6 +14,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        MainWindow.cpp
+        MainWindow.cpp \
+    FPSCounter.cpp
 
-HEADERS  += MainWindow.h
+HEADERS  += MainWindow.h \
+    FPSCounter.h

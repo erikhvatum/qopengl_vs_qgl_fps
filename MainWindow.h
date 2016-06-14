@@ -28,8 +28,7 @@ protected:
     QGraphicsView* m_central_view;
     QGraphicsTextItem* m_central_fps_item;
     QLabel* m_left_text;
-    int m_rots[3];
-    QTimer* m_refresh_timer;
+    QLabel* m_right_text;
     FPSCounter m_fps_counter;
 
     void set_central_widget_type(CentralWidgetType central_widget_type);
@@ -37,5 +36,8 @@ protected:
 protected slots:
     void on_qgl_widget_type_toggled(bool checked);
     void on_qopengl_widget_type_toggled(bool checked);
-    void on_refresh_timer_timeout();
+    void on_new_frame();
+
+signals:
+    void new_frame();
 };
